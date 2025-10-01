@@ -6,7 +6,10 @@
 | Uses IntersectionObserver for scroll-based entrance animations.
 */
 
-// --- DOM ELEMENTS ---
+// --- CONFIGURATION ---
+const TESTIMONIAL_DURATION = 5000;
+
+// --- DOM ELEMENTS CACHING ---
 const DOMElements = {
     navbar: document.getElementById('navbar'),
     mobileMenuToggle: document.getElementById('mobileMenuToggle'),
@@ -16,6 +19,7 @@ const DOMElements = {
     toast: document.getElementById('toast'),
     testimonialCards: document.querySelectorAll('.testimonial-card'),
     testimonialDots: document.querySelectorAll('.testimonials-dots .dot'),
+    // Grouping elements for the IntersectionObserver
     animatedElements: document.querySelectorAll('.section-title, .section-description, .milestone-card, .service-card, .project-item, .course-card-wrapper, .contact-info, .contact-form'),
     aboutSection: document.getElementById('about'),
 };
@@ -24,7 +28,7 @@ const DOMElements = {
 // --- UTILITY FUNCTIONS ---
 
 /**
- * Shows a brief toast notification at the bottom right.
+ * Shows a brief toast notification.
  * @param {string} message The message to display.
  */
 function showToast(message) {
@@ -34,7 +38,7 @@ function showToast(message) {
     // Reset and set message
     toast.textContent = message;
     
-    // Show toast
+    // Show toast (using rAF for smooth transition application)
     requestAnimationFrame(() => {
         toast.classList.add('show');
     });
@@ -55,12 +59,21 @@ function toggleMobileMenu() {
     const { navLinks } = DOMElements;
     if (!navLinks) return;
     
-    const isOpen = navLinks.style.display === 'flex';
-    navLinks.style.display = isOpen ? 'none' : 'flex';
+    // Toggle the display property for responsiveness
+    const isVisible = navLinks.style.display === 'flex';
+    navLinks.style.display = isVisible ? 'none' : 'flex';
+
+    // Update button icon (optional, but good UX)
+    const icon = DOMElements.mobileMenuToggle.querySelector('.menu-icon');
+    if (icon) {
+        icon.innerHTML = isVisible 
+            ? '<line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line>'
+            : '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+    }
 }
 
 /**
- * Handles the navbar shrinking/background change on scroll.
+ * Handles the navbar shrinking/background change on scroll (blur effect in CSS).
  */
 function handleNavbarScroll() {
     const { navbar } = DOMElements;
@@ -76,37 +89,49 @@ function handleNavbarScroll() {
 // --- ANIMATION LOGIC (IntersectionObserver) ---
 
 const observerOptions = {
-    // Start observing when 20% of the element is visible
+    // Fire callback when 20% of the element is visible
     threshold: 0.2, 
-    // Margin allows pre-loading before element reaches viewport center
+    // Allows animations to start slightly early
     rootMargin: '0px 0px -100px 0px' 
 };
 
-const animationObserver = new IntersectionObserver((entries) => {
+// Main observer for slide-in/fade-up animations
+const animationObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            
-            // Special parallax effect for the about section
-            if (entry.target.id === 'about') {
-                entry.target.classList.add('visible');
-            }
+            // Stop observing once visible to prevent re-triggering
+            observer.unobserve(entry.target); 
         }
     });
 }, observerOptions);
+
+// Special observer for the About section's parallax background effect
+const parallaxObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (DOMElements.aboutSection) {
+            // Apply a "visible" class as soon as the section starts intersecting
+            if (entry.isIntersecting) {
+                DOMElements.aboutSection.classList.add('visible');
+            } else {
+                DOMElements.aboutSection.classList.remove('visible');
+            }
+        }
+    });
+}, { threshold: 0.1 });
+
 
 /**
  * Attaches the IntersectionObserver to all animatable elements.
  */
 function setupScrollAnimations() {
     DOMElements.animatedElements.forEach(el => {
-        // Delay logic is handled by CSS transition-delay property set in HTML
         animationObserver.observe(el);
     });
     
-    // Special observer for the About section parallax effect
+    // Attach the dedicated parallax observer
     if (DOMElements.aboutSection) {
-        animationObserver.observe(DOMElements.aboutSection);
+        parallaxObserver.observe(DOMElements.aboutSection);
     }
 }
 
@@ -115,19 +140,17 @@ function setupScrollAnimations() {
 
 let currentTestimonialIndex = 0;
 let testimonialInterval;
-const TESTIMONIAL_DURATION = 5000;
 
 function showTestimonial(index) {
     const { testimonialCards, testimonialDots } = DOMElements;
     
-    // Safety check
     if (index < 0 || index >= testimonialCards.length) return;
 
-    // Remove active class from all
+    // Reset visibility and active state for all elements
     testimonialCards.forEach(card => card.classList.remove('active'));
     testimonialDots.forEach(dot => dot.classList.remove('active'));
     
-    // Add active class to current
+    // Set active state for the current index
     testimonialCards[index].classList.add('active');
     testimonialDots[index].classList.add('active');
     currentTestimonialIndex = index;
@@ -147,14 +170,13 @@ function setupTestimonials() {
     const { testimonialCards, testimonialDots } = DOMElements;
     if (testimonialCards.length === 0) return;
 
-    // Initial load
+    // Initial display and rotation start
     showTestimonial(0);
     startTestimonialRotation();
 
-    // Dot click handlers
+    // Dot click handlers: select testimonial and restart timer
     testimonialDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            // Stop, show selected, and restart
             clearInterval(testimonialInterval);
             showTestimonial(index);
             startTestimonialRotation();
@@ -166,7 +188,7 @@ function setupTestimonials() {
 // --- MAIN INITIALIZATION ---
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Initial setup
+    // 1. Navbar setup
     handleNavbarScroll();
     
     // 2. Event Listeners
@@ -176,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
         DOMElements.mobileMenuToggle.addEventListener('click', toggleMobileMenu);
     }
 
-    // Smooth scroll for internal links
+    // Smooth scroll for internal links & Mobile Menu closing
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -184,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
                 if (DOMElements.navLinks && window.innerWidth < 768) {
-                    DOMElements.navLinks.style.display = 'none'; // Close mobile menu on click
+                    DOMElements.navLinks.style.display = 'none'; // Close mobile menu
                 }
             }
         });
@@ -199,11 +221,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // General Button/Link demo handler
+    // General Button/Link demo handler (Prevent default action for demo)
     document.querySelectorAll('button, .project-link').forEach(button => {
         button.addEventListener('click', (e) => {
-            // Check if it's a submission button, otherwise prevent default for demo purposes
-            if (button.type !== 'submit' && button.tagName === 'BUTTON') {
+            if (button.type !== 'submit' && button.tagName === 'BUTTON' || button.classList.contains('project-link')) {
                 e.preventDefault();
                 showToast('Thanks for your interest! This is a demo.');
             }
@@ -218,11 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
             DOMElements.contactForm.reset();
         });
     }
-    
+
     // 3. Setup Animations and Carousels
     setupScrollAnimations();
     setupTestimonials();
-});
 
-// For course cards: simplified hover flip using CSS-only.
-// If more complex hover state was needed, logic would go here.
+    console.log('JIME Developers Cinematic Flow loaded successfully!');
+});
