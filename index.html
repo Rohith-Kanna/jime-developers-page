@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIME Developers | Turning Ideas into Stunning Webpages</title>
+    <meta name="description" content="We build websites that inspire — and teach you to code them too. Professional web development, training, and UI/UX consulting.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <div class="site-wrapper">
+
+        <header id="navbar" class="navbar">
+            <div class="container navbar-container">
+                <a href="#home" class="navbar-brand">
+                    <svg class="navbar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    <span class="navbar-title">JIME <span class="text-gradient">Developers</span></span>
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#courses" class="nav-link">Courses</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="btn btn-primary btn-sm bg-gradient-primary">Get Started</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="home" class="hero-section">
+                <div class="hero-background">
+                    <div class="hero-gradient animate-gradient"></div>
+                    <img src="assets/hero-bg.jpg" alt="Abstract background with glowing purple waves" class="hero-bg-image"/>
+                    <div class="hero-overlay"></div>
+                </div>
+
+                <div class="hero-float hero-float-1 animate-float"></div>
+                <div class="hero-float hero-float-2 animate-float" style="animation-delay: 1s;"></div>
+    
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-title-line reveal-up">Turning Ideas into</span>
+                        <span class="text-gradient hero-title-line reveal-up" style="animation-delay: 0.3s;">Stunning Webpages.</span>
+                    </h1>
+    
+                    <p class="hero-subtitle reveal-up" style="animation-delay: 0.5s;">
+                        We build websites that inspire — and teach you to code them too.
+                    </p>
+    
+                    <div class="hero-buttons reveal-up" style="animation-delay: 0.7s;">
+                        <button class="btn btn-lg btn-primary animate-glow">
+                            Start Your Project
+                        </button>
+                        <button class="btn btn-lg btn-outline">
+                            View Our Work
+                        </button>
+                    </div>
+                </div>
+
+                <button id="scrollIndicator" class="scroll-indicator" aria-label="Scroll down">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M19 12l-7 7-7-7"/>
+                    </svg>
+                </button>
+            </section>
+
+            <section id="about" class="about-section">
+                <div class="about-background parallax-bg">
+                    <img src="assets/about-bg.jpg" alt="Developer desk with three monitors" class="about-bg-image"/>
+                    <div class="about-overlay"></div>
+                </div>
+                
+                <div class="container relative z-10">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Who <span class="text-gradient">We Are</span>
+                        </h2>
+                        <p class="section-description">
+                            JIME Developers combines cutting-edge web development with comprehensive training programs. 
+                            We don't just build websites—we empower the next generation of developers.
+                        </p>
+                    </div>
+    
+                    <div class="milestones-grid">
+                        <div class="milestone-card glass-effect animate-reveal-up" style="transition-delay: 0ms;">
+                            <div class="milestone-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <div class="milestone-year">2019</div>
+                            <h3 class="milestone-title">Founded</h3>
+                            <p class="milestone-description">Started with a passion for web development</p>
+                        </div>
+                        <div class="milestone-card glass-effect animate-reveal-up" style="transition-delay: 150ms;">
+                            <div class="milestone-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <div class="milestone-year">2020</div>
+                            <h3 class="milestone-title">First Students</h3>
+                            <p class="milestone-description">Launched coding bootcamps</p>
+                        </div>
+                        <div class="milestone-card glass-effect animate-reveal-up" style="transition-delay: 300ms;">
+                            <div class="milestone-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 10 18 14 18 15.79 13.89"></polyline></svg>
+                            </div>
+                            <div class="milestone-year">2022</div>
+                            <h3 class="milestone-title">100+ Projects</h3>
+                            <p class="milestone-description">Delivered stunning websites</p>
+                        </div>
+                        <div class="milestone-card glass-effect animate-reveal-up" style="transition-delay: 450ms;">
+                            <div class="milestone-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            </div>
+                            <div class="milestone-year">2024</div>
+                            <h3 class="milestone-title">Innovation Hub</h3>
+                            <p class="milestone-description">Became a leading dev agency</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="services-section section-container">
+                <div class="services-background"></div>
+                <div class="container relative z-10">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Our <span class="text-gradient">Services</span>
+                        </h2>
+                        <p class="section-description">
+                            Comprehensive solutions for your digital needs
+                        </p>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card group glass-effect animate-reveal-up" style="transition-delay: 0ms;">
+                            <div class="service-gradient gradient-purple-blue"></div>
+                            <div class="service-content">
+                                <div class="service-icon gradient-purple-blue-bg">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6v6l4 2"></path></svg>
+                                </div>
+                                <h3 class="service-title">Web Development</h3>
+                                <p class="service-description">Full-stack development with modern frameworks. From landing pages to complex web applications.</p>
+                            </div>
+                            <div class="service-glow gradient-purple-blue"></div>
+                        </div>
+
+                        <div class="service-card group glass-effect animate-reveal-up" style="transition-delay: 150ms;">
+                            <div class="service-gradient gradient-blue-cyan"></div>
+                            <div class="service-content">
+                                <div class="service-icon gradient-blue-cyan-bg">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                </div>
+                                <h3 class="service-title">Coding Bootcamps</h3>
+                                <p class="service-description">Intensive training programs in HTML, CSS, JavaScript, Python, and Java. Learn by building real projects.</p>
+                            </div>
+                            <div class="service-glow gradient-blue-cyan"></div>
+                        </div>
+
+                        <div class="service-card group glass-effect animate-reveal-up" style="transition-delay: 300ms;">
+                            <div class="service-gradient gradient-cyan-pink"></div>
+                            <div class="service-content">
+                                <div class="service-icon gradient-cyan-pink-bg">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7-7-7v14z"></path><path d="M5 12h7"></path></svg>
+                                </div>
+                                <h3 class="service-title">UI/UX Design</h3>
+                                <p class="service-description">Beautiful, user-centered designs that convert. We create interfaces that users love.</p>
+                            </div>
+                            <div class="service-glow gradient-cyan-pink"></div>
+                        </div>
+
+                        <div class="service-card group glass-effect animate-reveal-up" style="transition-delay: 450ms;">
+                            <div class="service-gradient gradient-pink-purple"></div>
+                            <div class="service-content">
+                                <div class="service-icon gradient-pink-purple-bg">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                </div>
+                                <h3 class="service-title">Consulting</h3>
+                                <p class="service-description">Strategic guidance for your digital transformation. Architecture, performance, and scalability.</p>
+                            </div>
+                            <div class="service-glow gradient-pink-purple"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="courses" class="courses-section section-container">
+                <div class="courses-background">
+                    <pre class="code-animation">
+            function buildAmazingWebsite() {
+              const skills = ['HTML', 'CSS', 'JavaScript'];
+              return skills.map(skill => learn(skill));
+            }
+          `.repeat(20)}
+                    </pre>
+                </div>
+                <div class="container relative z-10">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Learn to <span class="text-gradient-accent">Code</span>
+                        </h2>
+                        <p class="section-description">
+                            Hands-on courses designed to take you from beginner to professional developer
+                        </p>
+                    </div>
+
+                    <div class="courses-grid">
+                        <div class="course-card-wrapper animate-reveal-up" data-index="0" style="transition-delay: 0ms;">
+                            <div class="course-card">
+                                <div class="course-card-front glass-effect">
+                                    <div class="course-icon gradient-orange-red-bg">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                    </div>
+                                    <h3 class="course-title">HTML & CSS</h3>
+                                    <div class="course-badges">
+                                        <span class="course-badge badge-primary">Beginner</span>
+                                        <span class="course-badge badge-accent">6 weeks</span>
+                                    </div>
+                                    <p class="course-hover-text">Hover for details</p>
+                                </div>
+                                <div class="course-card-back gradient-orange-red-back">
+                                    <h3 class="course-title-back">HTML & CSS</h3>
+                                    <p class="course-description-back">Master the fundamentals of web structure and styling. Build responsive layouts from scratch.</p>
+                                    <button class="btn-enroll">Enroll Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card-wrapper animate-reveal-up" data-index="1" style="transition-delay: 100ms;">
+                            <div class="course-card">
+                                <div class="course-card-front glass-effect">
+                                    <div class="course-icon gradient-yellow-orange-bg">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7-7-7v14z"></path><path d="M5 12h7"></path></svg>
+                                    </div>
+                                    <h3 class="course-title">JavaScript</h3>
+                                    <div class="course-badges">
+                                        <span class="course-badge badge-primary">Intermediate</span>
+                                        <span class="course-badge badge-accent">8 weeks</span>
+                                    </div>
+                                    <p class="course-hover-text">Hover for details</p>
+                                </div>
+                                <div class="course-card-back gradient-yellow-orange-back">
+                                    <h3 class="course-title-back">JavaScript</h3>
+                                    <p class="course-description-back">Learn modern JavaScript, DOM manipulation, async programming, and ES6+ features.</p>
+                                    <button class="btn-enroll">Enroll Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card-wrapper animate-reveal-up" data-index="2" style="transition-delay: 200ms;">
+                            <div class="course-card">
+                                <div class="course-card-front glass-effect">
+                                    <div class="course-icon gradient-blue-cyan-bg">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2"></path><path d="M12 17v4"></path><path d="M12 7V3"></path><path d="M18 10h-8"></path><path d="M6 14h8"></path></svg>
+                                    </div>
+                                    <h3 class="course-title">Python</h3>
+                                    <div class="course-badges">
+                                        <span class="course-badge badge-primary">Beginner</span>
+                                        <span class="course-badge badge-accent">10 weeks</span>
+                                    </div>
+                                    <p class="course-hover-text">Hover for details</p>
+                                </div>
+                                <div class="course-card-back gradient-blue-cyan-back">
+                                    <h3 class="course-title-back">Python</h3>
+                                    <p class="course-description-back">From basics to web frameworks. Django, Flask, data structures, and automation.</p>
+                                    <button class="btn-enroll">Enroll Now</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="course-card-wrapper animate-reveal-up" data-index="3" style="transition-delay: 300ms;">
+                            <div class="course-card">
+                                <div class="course-card-front glass-effect">
+                                    <div class="course-icon gradient-red-pink-bg">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h4"></path><path d="M10 16h4"></path><path d="M12 21a9 9 0 0 0 0-18c-3.9 0-7 3.5-7 8 0 1.5 0 3 1 4s2.5 3.5 5 4z"></path></svg>
+                                    </div>
+                                    <h3 class="course-title">Java</h3>
+                                    <div class="course-badges">
+                                        <span class="course-badge badge-primary">Intermediate</span>
+                                        <span class="course-badge badge-accent">12 weeks</span>
+                                    </div>
+                                    <p class="course-hover-text">Hover for details</p>
+                                </div>
+                                <div class="course-card-back gradient-red-pink-back">
+                                    <h3 class="course-title-back">Java</h3>
+                                    <p class="course-description-back">Object-oriented programming, Spring Boot, microservices, and enterprise applications.</p>
+                                    <button class="btn-enroll">Enroll Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="course-card-wrapper animate-reveal-up" data-index="4" style="transition-delay: 400ms;">
+                            <div class="course-card">
+                                <div class="course-card-front glass-effect">
+                                    <div class="course-icon gradient-purple-blue-bg">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path><path d="M3 12h18"></path></svg>
+                                    </div>
+                                    <h3 class="course-title">Full Stack</h3>
+                                    <div class="course-badges">
+                                        <span class="course-badge badge-primary">Advanced</span>
+                                        <span class="course-badge badge-accent">16 weeks</span>
+                                    </div>
+                                    <p class="course-hover-text">Hover for details</p>
+                                </div>
+                                <div class="course-card-back gradient-purple-blue-back">
+                                    <h3 class="course-title-back">Full Stack</h3>
+                                    <p class="course-description-back">Complete web development: React, Node.js, databases, deployment, and DevOps.</p>
+                                    <button class="btn-enroll">Enroll Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="projects-section section-container">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Our <span class="text-gradient">Work</span>
+                        </h2>
+                        <p class="section-description">
+                            Scroll through our recent projects
+                        </p>
+                    </div>
+
+                    <div id="projectsScroll" class="projects-scroll">
+                        <div class="project-item animate-reveal-scale" style="transition-delay: 0ms;">
+                            <div class="project-card glass-effect">
+                                <img src="assets/project-1.jpg" alt="E-Commerce Platform" class="project-image"/>
+                                <div class="project-overlay">
+                                    <div class="project-content">
+                                        <span class="project-category">Full Stack</span>
+                                        <h3 class="project-title">E-Commerce Platform</h3>
+                                        <p class="project-description">Modern shopping experience with real-time inventory</p>
+                                        <button class="project-link">
+                                            View Project 
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="project-border"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-item animate-reveal-scale" style="transition-delay: 150ms;">
+                            <div class="project-card glass-effect">
+                                <img src="assets/project-2.jpg" alt="Corporate Dashboard" class="project-image"/>
+                                <div class="project-overlay">
+                                    <div class="project-content">
+                                        <span class="project-category">Web App</span>
+                                        <h3 class="project-title">Corporate Dashboard</h3>
+                                        <p class="project-description">Data visualization and analytics platform</p>
+                                        <button class="project-link">
+                                            View Project 
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="project-border"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-item animate-reveal-scale" style="transition-delay: 300ms;">
+                            <div class="project-card glass-effect">
+                                <img src="assets/project-3.jpg" alt="Creative Portfolio" class="project-image"/>
+                                <div class="project-overlay">
+                                    <div class="project-content">
+                                        <span class="project-category">Website</span>
+                                        <h3 class="project-title">Creative Portfolio</h3>
+                                        <p class="project-description">Stunning showcase for digital artists</p>
+                                        <button class="project-link">
+                                            View Project 
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="project-border"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-item animate-reveal-scale" style="transition-delay: 450ms;">
+                            <div class="project-card glass-effect">
+                                <img src="assets/project-4.jpg" alt="Mobile Banking App" class="project-image"/>
+                                <div class="project-overlay">
+                                    <div class="project-content">
+                                        <span class="project-category">Mobile</span>
+                                        <h3 class="project-title">Mobile Banking App</h3>
+                                        <p class="project-description">Secure fintech solution with modern UI</p>
+                                        <button class="project-link">
+                                            View Project 
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="project-border"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonials" class="testimonials-section section-container">
+                <div class="testimonials-background"></div>
+                <div class="container relative z-10 testimonials-container">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            What Our <span class="text-gradient-accent">Clients Say</span>
+                        </h2>
+                    </div>
+
+                    <div class="testimonials-wrapper">
+                        <div class="testimonial-card glass-effect active" data-index="0">
+                            <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .756-2 2v10c0 1.244.756 2 2 2h3zm14-14v10c0 1.244.756 2 2 2h3c1.25 0 2-.756 2-2V5c0-1.25-.756-2.017-2-2h-4z"></path></svg>
+                            <p class="testimonial-text">
+                                "JIME Developers transformed our online presence. The website they built is stunning and our sales increased by 200%!"
+                            </p>
+                            <div class="testimonial-stars">
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <div class="testimonial-author">Sarah Mitchell</div>
+                            <div class="testimonial-role">Business Owner</div>
+                        </div>
+                        
+                        <div class="testimonial-card glass-effect" data-index="1">
+                            <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .756-2 2v10c0 1.244.756 2 2 2h3zm14-14v10c0 1.244.756 2 2 2h3c1.25 0 2-.756 2-2V5c0-1.25-.756-2.017-2-2h-4z"></path></svg>
+                            <p class="testimonial-text">
+                                "The coding bootcamp changed my life. I went from zero knowledge to landing my first developer job in just 4 months."
+                            </p>
+                            <div class="testimonial-stars">
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <div class="testimonial-author">David Chen</div>
+                            <div class="testimonial-role">Student</div>
+                        </div>
+
+                        <div class="testimonial-card glass-effect" data-index="2">
+                            <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .756-2 2v10c0 1.244.756 2 2 2h3zm14-14v10c0 1.244.756 2 2 2h3c1.25 0 2-.756 2-2V5c0-1.25-.756-2.017-2-2h-4z"></path></svg>
+                            <p class="testimonial-text">
+                                "Professional, creative, and always on time. They understood our vision and delivered beyond expectations."
+                            </p>
+                            <div class="testimonial-stars">
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <div class="testimonial-author">Emily Rodriguez</div>
+                            <div class="testimonial-role">Startup Founder</div>
+                        </div>
+
+                        <div class="testimonial-card glass-effect" data-index="3">
+                            <svg class="quote-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .756-2 2v10c0 1.244.756 2 2 2h3zm14-14v10c0 1.244.756 2 2 2h3c1.25 0 2-.756 2-2V5c0-1.25-.756-2.017-2-2h-4z"></path></svg>
+                            <p class="testimonial-text">
+                                "Amazing instructors and real-world projects. The skills I learned here are exactly what companies are looking for."
+                            </p>
+                            <div class="testimonial-stars">
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="star-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <div class="testimonial-author">Michael Johnson</div>
+                            <div class="testimonial-role">Career Switcher</div>
+                        </div>
+                    </div>
+
+                    <div class="testimonials-dots" id="testimonialDots">
+                        <button class="dot active" data-index="0" aria-label="Go to testimonial 1"></button>
+                        <button class="dot" data-index="1" aria-label="Go to testimonial 2"></button>
+                        <button class="dot" data-index="2" aria-label="Go to testimonial 3"></button>
+                        <button class="dot" data-index="3" aria-label="Go to testimonial 4"></button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <div class="contact-background">
+                    <img src="assets/contact-bg.jpg" alt="Abstract background with glowing red and blue waves" class="contact-bg-image"/>
+                    <div class="contact-overlay"></div>
+                </div>
+
+                <div class="container relative z-10">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            Let's Build Something <span class="text-gradient">Together</span>
+                        </h2>
+                        <p class="section-description">
+                            Have a project in mind? Want to learn to code? Get in touch with us today.
+                        </p>
+                    </div>
+
+                    <div class="contact-grid">
+                        <div class="contact-info animate-slide-left">
+                            <div class="contact-info-card glass-effect">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Email</div>
+                                    <div class="contact-value">hello@jimedevs.com</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-card glass-effect">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2 16 16 0 0 1-5.7-14.73 2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2.5a1 1 0 0 0 1 1 5.92 5.92 0 0 1 5.57 5.57 1 1 0 0 0 1 1h2.5a2 2 0 0 1 2 2z"></path></svg>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Phone</div>
+                                    <div class="contact-value">+1 (555) 123-4567</div>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-card glass-effect">
+                                <div class="contact-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Location</div>
+                                    <div class="contact-value">San Francisco, CA</div>
+                                </div>
+                            </div>
+
+                            <div class="office-hours-card glass-effect">
+                                <h3 class="office-hours-title">Office Hours</h3>
+                                <p class="office-hours-text">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                <p class="office-hours-text">Saturday: 10:00 AM - 4:00 PM</p>
+                                <p class="office-hours-text">Sunday: Closed</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-form glass-effect animate-slide-right">
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="Your name" required class="form-input"/>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="your@email.com" required class="form-input"/>
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" name="message" placeholder="Tell us about your project or what you'd like to learn..." rows="6" required class="form-textarea"></textarea>
+                                </div>
+    
+                                <button type="submit" class="btn btn-full btn-lg btn-primary group">
+                                    Send Message
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <h3 class="footer-logo">JIME <span class="text-gradient">Developers</span></h3>
+                        <p class="footer-description">
+                            Building the future of the web, one line of code at a time. Join us on this journey.
+                        </p>
+                    </div>
+
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4 class="footer-heading">Quick Links</h4>
+                            <a href="#home" class="footer-link">Home</a>
+                            <a href="#about" class="footer-link">About</a>
+                            <a href="#services" class="footer-link">Services</a>
+                            <a href="#courses" class="footer-link">Courses</a>
+                            <a href="#projects" class="footer-link">Projects</a>
+                            <a href="#contact" class="footer-link">Contact</a>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <h4 class="footer-heading">Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub" class="social-link glass-effect">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3.25 0 6.5-1.5 6.5-8v-.5c.5-1.5 1-2.5 1-3.5 0-.5-.5-1-1-1.5 0 0-1 0-3 1.5-2.5-.5-5-.5-7.5-.5-2.5 0-5 .5-7.5.5-2 0-3-1.5-3-1.5 0 .5-.5 1-1 1.5 0 1 .5 2 1 3.5v.5c0 6.5 3.25 8 6.5 8a4.8 4.8 0 0 0-1 3.2v4"></path></svg>
+                            </a>
+                            <a href="#" aria-label="Twitter" class="social-link glass-effect">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18.7 11.3a19.16 19.16 0 0 1-2.4-2.8c-1.5-1.4-1.7-2.9-.8-4.2 1.3 1.8 3.5 3.5 6.5 4a12.7 12.7 0 0 1-5.7 1.6c-.7 0-1.4-.1-2.1-.3 4.2-3 8.3-9.5 8.3-15.5 0-.2 0-.3 0-.5C13.8 6.5 16.5 4.8 18 3.5z"></path>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="social-link glass-effect">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="social-link glass-effect">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12 8a4 4 0 0 1 4 3.37z"></path><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"></line>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 JIME Developers. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <div id="toast" class="toast"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
