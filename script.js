@@ -211,7 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
     // Scroll Indicator/Button
     if (DOMElements.scrollIndicator) {
         DOMElements.scrollIndicator.addEventListener('click', (e) => {

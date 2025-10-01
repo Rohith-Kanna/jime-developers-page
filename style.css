@@ -74,6 +74,7 @@ body {
     position: relative;
     padding: 8rem 0;
     overflow: hidden;
+    min-height: 80vh;
 }
 
 .section-header {
@@ -351,8 +352,11 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, hsl(var(--background)), transparent, transparent);
-}
+    background: linear-gradient(to top, 
+        hsl(var(--background)) 0%, 
+        hsl(var(--background) / 0.7) 40%, /* CHANGE: Less opaque in the middle */
+        transparent 100%                 /* CHANGE: Fade to full transparent at the bottom */
+    );}
 .hero-float {
     position: absolute;
     border-radius: 50%;
@@ -792,9 +796,15 @@ body {
 .testimonials-container {
     max-width: 64rem;
 }
+
+#testimonials {
+    min-height: 80vh; /* ADD: Ensures the section occupies enough vertical space */
+}
+
 .testimonials-wrapper {
     position: relative;
-    height: 400px;
+ height: 500px;
+    min-height: 50vh; 
 }
 .testimonial-card {
     position: absolute;
